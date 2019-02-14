@@ -5,7 +5,7 @@
 # Padrino框架下
 
 <pre>
-gem 'small_harmonious_dictionary', git: ''
+gem 'small_harmonious_dictionary', git: 'https://github.com/nbyun/small_harmonious_dictionary.git'
 </pre>
 
 再往项目中的config文件夹下新增harmonious_dictionary文件夹，往其增加两个文件chinese_dictionary.txt和english_dictionary.txt,一个是中文敏感词库，一个是英文敏感词库
