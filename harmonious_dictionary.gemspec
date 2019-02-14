@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "harmonious_dictionary/version"
 
 Gem::Specification.new do |s|
-  s.name        = "small_harmonious_dictionary"
+  s.name        = "harmonious_dictionary"
   s.version     = HarmoniousDictionary::VERSION
   s.authors     = ["nby"]
   s.email       = ["835482737@qq.com"]
-  s.homepage    = "https://github.com/nbyun/small_harmonious_dictionary.git"
+  s.homepage    = "https://github.com/nbyun/harmonious_dictionary.git"
   s.summary     = %q{filter any words that need to be harmonized}
   s.description = %q{private gem}
 
