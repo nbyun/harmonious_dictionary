@@ -1,7 +1,7 @@
 # encoding: utf-8
 
-require File.expand_path("lib/harmonious_dictionary/rseg.rb")
-require File.expand_path("lib/harmonious_dictionary/version")
+require "harmonious_dictionary/rseg"
+require "harmonious_dictionary/version"
 
 module HarmoniousDictionary
   def self.clean?(input)

@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = HarmoniousDictionary::VERSION
   s.authors     = ["nby"]
   s.email       = ["835482737@qq.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/nbyun/small_harmonious_dictionary.git"
   s.summary     = %q{filter any words that need to be harmonized}
   s.description = %q{private gem}
 
