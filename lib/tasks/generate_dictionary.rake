@@ -2,7 +2,7 @@ require 'yaml'
 
 namespace :harmonious_dictionary do
   desc "generate harmonious dictionary for use"
-  task :generate => :environment do
+  task :generate do
     chinese_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','chinese_dictionary.txt')
     english_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','english_dictionary.txt')
 
