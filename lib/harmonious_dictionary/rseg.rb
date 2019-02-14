@@ -147,11 +147,11 @@ module HarmoniousDictionary
     end
 
     def english_yaml_path
-      File.expand_path('word_lib/harmonious_english.yml')
+      File.join(Padrino.root, 'config/harmonious_dictionary/harmonious_english.yml')
     end
 
     def chinese_dictionary_path
-      File.expand_path('word_lib/harmonious.hash')
+      File.join(Padrino.root, 'config/harmonious_dictionary/harmonious.hash')
     end
   end
 end
