@@ -2,7 +2,7 @@
 
 require "harmonious_dictionary/rseg"
 require "harmonious_dictionary/version"
-Padrino.application.load "tasks/generate_dictionary.rake"
+load "tasks/generate_dictionary.rake"
 
 module HarmoniousDictionary
   def self.clean?(input)

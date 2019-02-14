@@ -3,8 +3,8 @@ require 'yaml'
 namespace :harmonious_dictionary do
   desc "generate harmonious dictionary for use"
   task :generate do
-    chinese_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','chinese_dictionary.txt')
-    english_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','english_dictionary.txt')
+    chinese_dictionary_path = File.expand_path('../config/harmonious_dictionary/chinese_dictionary.txt')
+    english_dictionary_path = File.expand_path('../config/harmonious_dictionary/english_dictionary.txt')
 
     puts "Processing chinese words..."
     tree = {}
@@ -46,9 +46,9 @@ def process(path, tree)
 end
 
 def hash_path
-  File.join(Padrino.root, 'config','harmonious_dictionary','harmonious.hash')
+  File.expand_path('../config/harmonious_dictionary/harmonious.hash')
 end
 
 def yaml_path
-  File.join(Padrino.root, 'config','harmonious_dictionary','harmonious_english.yml')
+  File.expand_path('../config/harmonious_dictionary/harmonious_english.yml')
 end
