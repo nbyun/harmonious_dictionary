@@ -3,7 +3,6 @@ require 'yaml'
 namespace :harmonious_dictionary do
   desc "generate harmonious dictionary for use"
   task :generate do
-    puts Rake.root
     chinese_dictionary_path = File.expand_path('config/harmonious_dictionary/chinese_dictionary.txt', Rake.application.original_dir)
     english_dictionary_path = File.expand_path('config/harmonious_dictionary/english_dictionary.txt', Rake.application.original_dir)
 
