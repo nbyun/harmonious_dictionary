@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "harmonious_dictionary/version"
 
 Gem::Specification.new do |s|
-  s.name        = "harmonious_dictionary"
+  s.name        = "small_harmonious_dictionary"
   s.version     = HarmoniousDictionary::VERSION
   s.authors     = ["nby"]
   s.email       = ["835482737@qq.com"]
