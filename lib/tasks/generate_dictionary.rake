@@ -3,20 +3,19 @@ require 'yaml'
 namespace :harmonious_dictionary do
   desc "generate harmonious dictionary for use"
   task :generate do
-    chinese_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','chinese_dictionary.txt')
-    english_dictionary_path = File.join(Padrino.root, 'config','harmonious_dictionary','english_dictionary.txt')
+    chinese_dictionary_path = File.expand_path(Bundler.root, 'config','harmonious_dictionary','chinese_dictionary.txt')
+    english_dictionary_path = File.join(Bundler.root, 'config','harmonious_dictionary','english_dictionary.txt')
 
     puts "Processing chinese words..."
     tree = {}
-    model = ENV['model']
     process(chinese_dictionary_path, tree)
-    File.open(hash_path(model), "wb") {|io| Marshal.dump(tree, io)}  
+    File.open(hash_path, "wb:utf-8") {|io| Marshal.dump(tree, io)}  
     puts 'Done'
 
     puts 'Processing english words...'
     english_dictionary = []
     process_english_words(english_dictionary_path,english_dictionary)
-    File.open(yaml_path, "wb") {|io| YAML::dump(english_dictionary, io)} 
+    File.open(yaml_path, "wb:utf-8") {|io| YAML::dump(english_dictionary, io)} 
     puts 'Done'
   end
 end
@@ -46,10 +45,10 @@ def process(path, tree)
   end
 end
 
-def hash_path(model = nil)
-  File.join(Padrino.root, 'config','harmonious_dictionary','harmonious.hash')
+def hash_path
+  File.join(Bundler.root, 'config','harmonious_dictionary','harmonious.hash')
 end
 
-def yaml_path(model = nil)
-  File.join(Padrino.root, 'config','harmonious_dictionary','harmonious_english.yml')
+def yaml_path
+  File.join(Bundler.root, 'config','harmonious_dictionary','harmonious_english.yml')
 end
