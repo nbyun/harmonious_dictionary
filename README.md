@@ -14,5 +14,9 @@ gem 'small_harmonious_dictionary', git: 'https://github.com/nbyun/small_harmonio
 
 然后执行rake harmonious_dictionary:generate，此时词库已经初始化成功，可以进入使用了！
 
+* 检查输入是否包含敏感词 `HarmoniousDictionary.clean?(your_input)`
+* 检查包含的敏感词 `HarmoniousDictionary.harmonious_words(your_input)`
+* 替换包含的敏感词为* `HarmoniousDictionary.clean(your_input)`
+
 # Rails框架下
 #TODO
